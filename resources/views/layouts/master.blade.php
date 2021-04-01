@@ -8,11 +8,11 @@
 </head>
 <body>
     <header>
-        @yield('header');
+        @yield('header')
     </header>
     <div class="container">
 
-        @yield('content');
+        @yield('content')
         <!-- This is a container for content
         Yield is used to display the contents of a given section-->
 
