@@ -9,6 +9,7 @@
     <div>
         <label for="search">Search for drinks</label>
         <input name="search" id="search" type="text" />
+        <button type="submit">Search</button>
     </div>
 </form>
 @include('errors')
