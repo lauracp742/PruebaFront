@@ -14,11 +14,13 @@
 </form>
 
 {{-- @dd($response) --}}
+@if($response ?? '')
+    @foreach($response['drinks'] as $drink)
+        <h2> {{ $drink['strDrink'] }}  </h2>
+        <img src=" {{ $drink['strDrinkThumb'] }}" />
+    @endforeach
+@endif
 
- @foreach($response['drinks'] as $drink)
-<h2> {{ $drink['strDrink'] }}  </h2>
-<img src=" {{ $drink['strDrinkThumb'] }}" />
-@endforeach
 @include('errors')
 
 @endsection

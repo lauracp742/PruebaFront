@@ -14,19 +14,16 @@ class SearchDrinkController extends DashboardController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function search(Request $request)
+    public function __invoke(Request $request)
     {
+        $user = Auth::user();
         $search = $request->input('search');
-
-
         $response = Http::get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=$search");
-
         $response = json_decode($response->body(), true);
-
-        return view(
-            'dashboard',
-            $response->drinks
-        );
+        return view('dashboard', [
+            'user' => $user,
+            'response' => $response
+        ]);
     }
 }
 

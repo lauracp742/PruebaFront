@@ -38,17 +38,19 @@ Route::get('logout', LogoutController::class);
 Route::post('register', RegisterController::class);
 Route::view('/register', 'auth/register');
 // Route::get('/search', DashboardController::class)->name('search');
-Route::get('search', function (Request $request) {
+// Route::get('search', function (Request $request) {
 
-    $user = Auth::user();
-    $search = $request->input('search');
-    $response = Http::get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=$search");
-    $response = json_decode($response->body(), true);
-    return view('dashboard', [
-        'user' => $user,
-        'response' => $response
-    ]);
-    // return Drink::search($request->search)->get();
-    // dd($request);
-});
+//     $user = Auth::user();
+//     $search = $request->input('search');
+//     $response = Http::get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=$search");
+//     $response = json_decode($response->body(), true);
+//     return view('dashboard', [
+//         'user' => $user,
+//         'response' => $response
+//     ]);
+//     // return Drink::search($request->search)->get();
+//     // dd($request);
+// });
+
+Route::get('search', SearchDrinkController::class);
 //Route::get('/search', ['uses' => DashboardController::class])-name('search');
