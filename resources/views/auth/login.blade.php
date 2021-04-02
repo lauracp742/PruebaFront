@@ -3,8 +3,9 @@
 
 @section('content')
     {{-- This is the body content, within the container --}}
-    <section class="post-forms">
-        <div class="post-container">
+    <section class="login-form">
+        <div class="form-container">
+            <h1>Login</h1>
 
             <form action="/login" method="post">
             @csrf
