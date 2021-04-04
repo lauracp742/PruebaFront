@@ -12,10 +12,14 @@
 
                 <div>
                     <label for="email">Email</label>
+                </div>
+                <div>
                     <input name="email" id="email" type="email" />
                 </div>
                 <div>
                     <label for="password">Password</label>
+                </div>
+                <div>
                     <input name="password" id="password" type="password" />
                 </div>
 
