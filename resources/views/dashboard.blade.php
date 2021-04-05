@@ -4,6 +4,7 @@
 
 
 
+<div class="container">
 
 <form action="search" method="GET">
     <div>
@@ -14,18 +15,33 @@
 </form>
 
 {{-- @dd($response) --}}
+
+
+
 @if($response ?? '')
-<div class="container">
+    @if($response['drinks'] === null )
+        @error('search')
+        <div class="">
+            {{ $message }}
+        </div>
+        @enderror
+    @else
     @foreach($response['drinks'] as $drink)
      <div class="drink">
         <h2> {{ $drink['strDrink'] }}  </h2>
         <img src=" {{ $drink['strDrinkThumb'] }}" />
         <button>Like</button>
     </div>
+
     @endforeach
-</div>
+@endif
 @endif
 
+
 @include('errors')
+
+
+
+
 
 @endsection

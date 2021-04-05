@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+@include('errors')
 
 @section('content')
     {{-- This is the body content, within the container --}}
@@ -7,7 +8,7 @@
         <div class="form-container">
             <h1>Login</h1>
 
-            <form action="/login" method="post">
+            <form action="login" method="post">
             @csrf
 
                 <div>
