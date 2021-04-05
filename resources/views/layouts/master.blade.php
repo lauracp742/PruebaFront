@@ -30,13 +30,13 @@
         @endif
     </form>
     </header>
-    <div class="container">
+    <main>
 
         @yield('content')
         <!-- This is a container for content
         Yield is used to display the contents of a given section-->
 
-    </div>
+    </main>
 
 
 </body>

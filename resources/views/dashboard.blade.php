@@ -15,10 +15,15 @@
 
 {{-- @dd($response) --}}
 @if($response ?? '')
+<div class="container">
     @foreach($response['drinks'] as $drink)
+     <div class="drink">
         <h2> {{ $drink['strDrink'] }}  </h2>
         <img src=" {{ $drink['strDrinkThumb'] }}" />
+        <button>Like</button>
+    </div>
     @endforeach
+</div>
 @endif
 
 @include('errors')
