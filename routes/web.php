@@ -41,6 +41,7 @@ Route::get('logout', LogoutController::class);
 Route::post('register', RegisterController::class);
 Route::view('/register', 'auth/register');
 Route::get('favorites', FavoritesController::class)->middleware('auth');
+Route::get('search', SearchDrinkController::class)->middleware('auth');
 Route::post('delete', DeleteFavoritesController::class);
 // Route::get('/search', DashboardController::class)->name('search');
 // Route::get('search', function (Request $request) {

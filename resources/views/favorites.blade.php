@@ -4,6 +4,7 @@
 
 <div>
 
+
      @forelse ($user->favorites as $favorite)
     <div class="drink">
         <p>{{ $favorite->name }}</p>

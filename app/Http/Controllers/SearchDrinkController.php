@@ -21,8 +21,6 @@ class SearchDrinkController extends DashboardController
         $response = Http::get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=$search");
         $response = json_decode($response->body(), true);
 
-        //foreach ($user->favorites as $favorite)
-
         if ($response['drinks'] !== null)
             return view('dashboard', [
                 'user' => $user,

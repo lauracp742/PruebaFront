@@ -27,6 +27,7 @@
                 <h2> {{ $drink['strDrink'] }}  </h2>
                 <img src=" {{ $drink['strDrinkThumb'] }}" />
 
+
                 @if ($favorite = $user->favorites->firstWhere('name', $drink['strDrink']))
                         <form action="delete" method="post">
                             @csrf
