@@ -15,7 +15,7 @@
         <li><a href="dashboard"> Home </a></li>
 
         @if (Auth::check())
-        <li><a href="">Your Favorites</a></li>
+        <li><a href="favorites">Your Favorites</a></li>
 
         <li><a href="logout"> Logout </a></li>
 

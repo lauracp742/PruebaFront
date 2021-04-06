@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AddFavoriteController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
@@ -38,6 +39,7 @@ Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::get('logout', LogoutController::class);
 Route::post('register', RegisterController::class);
 Route::view('/register', 'auth/register');
+Route::get('favorites', FavoritesController::class)->middleware('auth');
 // Route::get('/search', DashboardController::class)->name('search');
 // Route::get('search', function (Request $request) {
 
