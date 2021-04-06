@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchDrinkController;
+use App\Http\Controllers\DeleteFavoritesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +41,7 @@ Route::get('logout', LogoutController::class);
 Route::post('register', RegisterController::class);
 Route::view('/register', 'auth/register');
 Route::get('favorites', FavoritesController::class)->middleware('auth');
+Route::post('delete', DeleteFavoritesController::class);
 // Route::get('/search', DashboardController::class)->name('search');
 // Route::get('search', function (Request $request) {
 

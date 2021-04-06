@@ -16,6 +16,11 @@ class AddFavoriteController extends Controller
      */
     public function __invoke(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|string',
+            'image' => 'required|string',
+        ]);
+
         $favorite = new Favorite();
         $favorite->user_id = Auth::id();
         $favorite->name = $request->input('name');
