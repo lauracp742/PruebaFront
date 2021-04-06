@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddFavoriteController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
@@ -53,4 +54,5 @@ Route::view('/register', 'auth/register');
 // });
 
 Route::get('search', SearchDrinkController::class);
+Route::post('favorites', AddFavoriteController::class)->middleware('auth');
 //Route::get('/search', ['uses' => DashboardController::class])-name('search');

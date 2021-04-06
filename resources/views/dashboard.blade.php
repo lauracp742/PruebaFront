@@ -30,7 +30,13 @@
      <div class="drink">
         <h2> {{ $drink['strDrink'] }}  </h2>
         <img src=" {{ $drink['strDrinkThumb'] }}" />
-        <button>Like</button>
+        <form action="/favorites" method="POST">
+            @csrf
+            <input type="hidden" name="image" value=" {{ $drink['strDrinkThumb'] }}" />
+            <input type="hidden" name="name" value=" {{ $drink['strDrink'] }}" />
+            <button type="submit">Like</button>
+        </form>
+
     </div>
 
     @endforeach
