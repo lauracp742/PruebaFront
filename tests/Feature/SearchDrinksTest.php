@@ -13,7 +13,6 @@ class SearchDrinksTest extends TestCase
 
     public function test_search_drinks()
     {
-
         $user = User::factory()->create();
 
         $response = $this

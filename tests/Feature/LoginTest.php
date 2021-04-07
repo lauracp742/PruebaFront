@@ -10,7 +10,6 @@ use Tests\TestCase;
 
 class LoginTest extends TestCase
 {
-
     use RefreshDatabase;
 
 
@@ -23,7 +22,6 @@ class LoginTest extends TestCase
 
     public function test_login_user()
     {
-
         $user = new User();
         $user->name = 'Mr Robot';
         $user->email = 'example@yrgo.se';
