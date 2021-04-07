@@ -21,11 +21,14 @@ class SearchDrinkController extends DashboardController
         $response = Http::get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=$search");
         $response = json_decode($response->body(), true);
 
-        if ($response['drinks'] !== null)
+
+        if ($response['drinks'] !== null) {
             return view('dashboard', [
                 'user' => $user,
                 'response' => $response
             ]);
+        }
+
 
         return redirect('/dashboard')->withErrors('Whoops! Please try something else.');
     }
