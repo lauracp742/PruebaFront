@@ -1,3 +1,9 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,17 +14,23 @@ html {
   box-sizing: border-box;
 }
 
+main {
+  width: 100%;
+}
+
 body {
   font: 100% Helvetica, sans-serif;
   color: #333;
+  width: 100%;
   height: 100vh;
+  background-color: #dd8ea3;
 }
 
 header {
   width: 100%;
-  height: 10rem;
+  height: 5rem;
   margin: 0;
-  background-color: pink;
+  background-color: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,32 +43,9 @@ header li {
   list-style: none;
   margin: 2rem;
 }
-
-/*** LOGIN ***/
-main {
-  width: 100%;
-  height: 90vw;
-  align-content: center;
-}
-
-.form-container form, .form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.form-container {
-  width: 100%;
-  height: 30rem;
-  text-align: center;
-}
-.form-container form {
-  width: 20rem;
-  align-self: center;
-  margin: 2rem;
-}
-.form-container form div {
-  margin-bottom: 0.5rem;
+header a {
+  text-decoration: none;
+  font-size: 1.6rem;
 }
 
 .drink {
@@ -80,3 +69,5 @@ main {
   padding: 10px 20px;
   background-color: pink;
 }
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,134 @@
+/*** LOGIN ***/
+.form-container form, .form-container, .login-form, main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  size: 10px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  width: 100%;
+  height: 100vh;
+  background-color: #dd8ea3;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  margin: 0;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+}
+header li {
+  list-style: none;
+  margin: 2rem;
+}
+header a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.drink {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.drink img {
+  width: 50%;
+}
+.drink h2,
+.drink button {
+  margin: 20px;
+}
+.drink button {
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: pink;
+}
+
+.login-form {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.form-container {
+  align-self: center;
+  width: 22rem;
+  height: 32rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 1rem;
+}
+.form-container h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.form-container form {
+  align-self: center;
+  margin: 2rem;
+}
+.form-container form div {
+  margin-bottom: 0.5rem;
+}
+.form-container form label {
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+.form-container form input {
+  width: 17rem;
+  height: 2rem;
+  margin-bottom: 0.7rem;
+  outline: 0;
+  border-width: 0 0 0.1rem;
+  border-color: #424283;
+}
+.form-container form ::placeholder {
+  font-size: 1.2rem;
+}
+.form-container form input:focus {
+  border-color: #dd8ea3;
+  outline: 1px solid #000;
+}
+.form-container form button {
+  background-color: #fddd88;
+  align-self: center;
+  width: 15rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  border: none;
+  border-radius: 1rem;
+}
+.form-container a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=login.css.map */

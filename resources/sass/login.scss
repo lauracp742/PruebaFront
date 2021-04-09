@@ -1,0 +1,69 @@
+/*** LOGIN ***/
+@import "app";
+
+.login-form {
+    @extend %flex-box-settings;
+    width: 100%;
+    margin-top: 4rem;
+}
+.form-container {
+    @extend %flex-box-settings;
+    align-self: center;
+    width: 22rem;
+    height: 32rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 1rem;
+    h1 {
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    form {
+        @extend %flex-box-settings;
+        align-self: center;
+        margin: 2rem;
+
+        div {
+            margin-bottom: 0.5rem;
+        }
+        label {
+            font-size: 1.2rem;
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+        }
+
+        input {
+            width: 17rem;
+            height: 2rem;
+            margin-bottom: 0.7rem;
+            outline: 0;
+            border-width: 0 0 0.1rem;
+            border-color: rgb(66, 66, 131);
+        }
+        ::placeholder {
+            font-size: 1.2rem;
+        }
+
+        input:focus {
+            border-color: #dd8ea3;
+
+            outline: 1px solid #000; //whatever you like
+        }
+
+        button {
+            background-color: #fddd88;
+            align-self: center;
+            width: 15rem;
+            height: 2.5rem;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: $primary-color;
+            border: none;
+            border-radius: 1rem;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
