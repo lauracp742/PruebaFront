@@ -7,6 +7,13 @@ $primary-color: #333;
     flex-direction: column;
     justify-content: center;
 }
+%button-settings {
+    background-color: #fddd88;
+    align-self: center;
+    color: $primary-color;
+    border: none;
+    border-radius: 1rem;
+}
 
 * {
     margin: 0;
@@ -42,6 +49,7 @@ header {
     nav {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     li {
@@ -55,7 +63,7 @@ header {
 }
 
 .drink {
-    width: 100%;
+    width: calc(100%-2rem);
     display: flex;
     flex-direction: column;
     justify-content: center;

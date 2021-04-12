@@ -6,9 +6,11 @@
 
 <div class="container">
     <form action="search" method="GET">
-        <div>
-            <label for="search">Search for drinks</label>
-            <input name="search" id="search" type="text" />
+        <div class="search-container">
+            <div>
+                <label hidden for="search">Search for drinks</label>
+            </div>
+            <input name="search" id="search" type="text" placeholder="search for a drink" />
             <button type="submit">Search</button>
         </div>
     </form>

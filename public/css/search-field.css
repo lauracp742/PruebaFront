@@ -1,7 +1,15 @@
-main {
+.search-container, main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.search-container button {
+  background-color: #fddd88;
+  align-self: center;
+  color: #333;
+  border: none;
+  border-radius: 1rem;
 }
 
 * {
@@ -69,4 +77,35 @@ header a {
   cursor: pointer;
   padding: 10px 20px;
   background-color: pink;
+}
+
+.search-container {
+  flex-direction: row;
+  align-items: center;
+  width: calc(100%-2rem);
+  margin: 1rem;
+}
+.search-container button {
+  border-radius: 0%;
+  width: 5rem;
+  height: 2rem;
+  font-size: 1.2rem;
+}
+
+form label {
+  font-size: 1.6rem;
+}
+form input {
+  height: 2rem;
+  margin: 1rem 0 1rem 0;
+  border: none;
+}
+form ::-moz-placeholder {
+  text-align: center;
+}
+form :-ms-input-placeholder {
+  text-align: center;
+}
+form ::placeholder {
+  text-align: center;
 }

@@ -1,0 +1,31 @@
+@import "app";
+
+.search-container {
+    @extend %flex-box-settings;
+    flex-direction: row;
+    align-items: center;
+    width: calc(100%-2rem);
+    margin: 1rem;
+
+    button {
+        @extend %button-settings;
+        border-radius: 0%;
+        width: 5rem;
+        height: 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+form {
+    label {
+        font-size: 1.6rem;
+    }
+    input {
+        height: 2rem;
+        margin: 1rem 0 1rem 0;
+        border: none;
+    }
+    ::placeholder {
+        text-align: center;
+    }
+}

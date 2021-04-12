@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/search-field.css">
     <title>Your best beer app</title>
 </head>
 <body>
@@ -16,28 +17,23 @@
         <li><a href="dashboard"> Home </a></li>
 
         @if (Auth::check())
-        <li><a href="favorites">Your Favorites</a></li>
+        <li><a href="favorites">Favorites</a></li>
 
         <li><a href="logout"> Logout </a></li>
 
+        @endif
 
        </nav>
-       <form action="search" method="GET">
-        <div>
-            <label for="search">Search for drinks</label>
-            <input name="search" id="search" type="text" />
-            <button type="submit">Search</button>
-        </div>
-        @endif
-    </form>
+
+
     </header>
-    <main>
+    <section>
 
         @yield('content')
         <!-- This is a container for content
         Yield is used to display the contents of a given section-->
 
-    </main>
+        </section>
 
 
 </body>

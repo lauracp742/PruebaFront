@@ -5,6 +5,14 @@
   justify-content: center;
 }
 
+.form-container form button {
+  background-color: #fddd88;
+  align-self: center;
+  color: #333;
+  border: none;
+  border-radius: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,6 +47,7 @@ header {
 header nav {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 header li {
   list-style: none;
@@ -50,7 +59,7 @@ header a {
 }
 
 .drink {
-  width: 100%;
+  width: calc(100%-2rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,6 +118,12 @@ header a {
   border-width: 0 0 0.1rem;
   border-color: #424283;
 }
+.form-container form ::-moz-placeholder {
+  font-size: 1.2rem;
+}
+.form-container form :-ms-input-placeholder {
+  font-size: 1.2rem;
+}
 .form-container form ::placeholder {
   font-size: 1.2rem;
 }
@@ -117,18 +132,11 @@ header a {
   outline: 1px solid #000;
 }
 .form-container form button {
-  background-color: #fddd88;
-  align-self: center;
   width: 15rem;
   height: 2.5rem;
   margin-top: 1rem;
   font-size: 1.5rem;
-  color: #333;
-  border: none;
-  border-radius: 1rem;
 }
 .form-container a {
   text-decoration: none;
 }
-
-/*# sourceMappingURL=login.css.map */
