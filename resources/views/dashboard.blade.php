@@ -27,7 +27,8 @@
         @foreach($response['drinks'] as $drink)
             <div class="drink">
                 <h2> {{ $drink['strDrink'] }}  </h2>
-                <img src=" {{ $drink['strDrinkThumb'] }}" />
+                <a href=" {{ route('recipe', $drink['idDrink']) }}" aria-label="link to recipe">
+                <img src=" {{ $drink['strDrinkThumb'] }}" alt="Photo of the drink" /> </a>
 
 
                 @if ($favorite = $user->favorites->firstWhere('name', $drink['strDrink']))

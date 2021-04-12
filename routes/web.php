@@ -8,11 +8,9 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchDrinkController;
 use App\Http\Controllers\DeleteFavoritesController;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\GetRecipeController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Drink;
-use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,13 +34,14 @@ Route::get('/', function () {
 
 Route::view('/', 'auth/login')->name('login')->middleware('guest'); // Directs site to login page
 Route::post('login', LoginController::class);
-Route::get('dashboard', DashboardController::class)->middleware('auth');
+Route::get('dashboard', DashboardController::class)->middleware('auth')->name('dashboard');
 Route::get('logout', LogoutController::class);
 Route::post('register', RegisterController::class);
 Route::view('/register', 'auth/register');
 Route::get('favorites', FavoritesController::class)->middleware('auth');
 Route::get('search', SearchDrinkController::class)->middleware('auth');
 Route::post('delete', DeleteFavoritesController::class);
+Route::get('/recipe/{drinkId}', [GetRecipeController::class, 'index'])->name('recipe');
 
 
 Route::post('favorites', AddFavoriteController::class)->middleware('auth');

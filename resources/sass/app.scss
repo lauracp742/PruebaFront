@@ -1,6 +1,6 @@
 $font-stack: Helvetica, sans-serif;
-
 $primary-color: #333;
+$mobile: "(max-width: 375px)";
 
 %flex-box-settings {
     display: flex;
@@ -14,13 +14,11 @@ $primary-color: #333;
     border: none;
     border-radius: 1rem;
 }
-
 * {
     margin: 0;
     padding: 0;
     size: 10px;
 }
-
 html {
     box-sizing: border-box;
 }
@@ -36,7 +34,6 @@ body {
     height: 100vh;
     background-color: #dd8ea3;
 }
-
 header {
     width: 100%;
     height: 5rem;
@@ -59,6 +56,16 @@ header {
     a {
         text-decoration: none;
         font-size: 1.6rem;
+    }
+}
+@media screen and #{$mobile} {
+    header {
+        li {
+            margin: 1rem;
+        }
+        a {
+            font-size: 1.4rem;
+        }
     }
 }
 

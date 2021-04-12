@@ -14,7 +14,7 @@
        <nav>
            <ul>
         </ul>
-        <li><a href="dashboard"> Home </a></li>
+        <li><a href="{{route('dashboard')}} "> Home </a></li>
 
         @if (Auth::check())
         <li><a href="favorites">Favorites</a></li>

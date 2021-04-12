@@ -30,20 +30,5 @@ class RegisterController extends Controller
 
         auth()->login($user);
         return redirect()->to('/dashboard');
-
-        /////
-
-        // $this->validate(request(), [
-        //     'name' => 'required',
-        //     'email' => 'required|email',
-        //     'password' => 'required'
-        // ]);
-
-        // $user = User::create(request(['name', 'email', 'password']));
-
-        // auth()->login($user);
-
-        // return redirect()->to('/games');
-        // return back();
     }
 }
