@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/search-field.css">
+    <link rel="stylesheet" href="/css/recipe.css">
     <title>Your best beer app</title>
 </head>
 <body>

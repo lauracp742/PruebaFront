@@ -9,15 +9,22 @@
     <img src=" {{ $drink['strDrinkThumb'] }}" alt="Photo of the drink" />
 
 </div>
+<div class="recipe-container">
+    <div class="ingredients">
+    <h2> Ingredients</h2>
+    @foreach ($ingredients as $ingredient)
+    <ul>
+        <li>{{ $ingredient['ingredient'] }}</li>
+    </ul>
+        <p>{{ $ingredient['measurements'] }} </p>
+        @endforeach
+    </div>
 
-
-@foreach ($ingredients as $ingredient)
-<div>
-    <p>{{ $ingredient['ingredient'] }}</p>
-    <p>{{ $ingredient['measurements'] }} </p>
+    <div class="ingredients">
+    <h3>Instructions</h3>
+        <p>{{ $drink['strInstructions'] }}</p>
+    </div>
 </div>
-@endforeach
-
 
 
 

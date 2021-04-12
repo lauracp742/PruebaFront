@@ -1,0 +1,29 @@
+@import "app";
+
+.recipe-container {
+    @extend %flex-box-settings;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.ingredients {
+    @extend %flex-box-settings;
+    margin-bottom: 1rem;
+    max-width: 500px;
+    align-items: center;
+
+    p {
+        font-size: 1.4rem;
+        margin-top: 0.2rem;
+    }
+    h2,
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+li {
+    font-weight: 600;
+    font-size: 1.4rem;
+}

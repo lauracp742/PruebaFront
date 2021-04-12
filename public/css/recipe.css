@@ -1,0 +1,105 @@
+.ingredients, .recipe-container, main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  size: 10px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  width: 100%;
+  height: 100vh;
+  background-color: #dd8ea3;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  margin: 0;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+header li {
+  list-style: none;
+  margin: 2rem;
+}
+header a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 375px) {
+  header li {
+    margin: 1rem;
+  }
+  header a {
+    font-size: 1.4rem;
+  }
+}
+.drink {
+  width: calc(100%-2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.drink img {
+  width: 50%;
+}
+.drink h2,
+.drink button {
+  margin: 20px;
+}
+.drink button {
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: pink;
+}
+
+.recipe-container {
+  width: 100%;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ingredients {
+  margin-bottom: 1rem;
+  max-width: 500px;
+  align-items: center;
+}
+.ingredients p {
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+}
+.ingredients h2,
+.ingredients h3 {
+  font-size: 2rem;
+}
+
+li {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
