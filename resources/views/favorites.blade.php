@@ -8,7 +8,9 @@
      @forelse ($user->favorites as $favorite)
     <div class="drink">
         <p>{{ $favorite->name }}</p>
+        <a href=" {{ route('recipe', $favorite->drink_id) }}" aria-label="link to recipe">
         <img src="{{ $favorite->image }}" />
+        </a>
     </div>
 
     @empty

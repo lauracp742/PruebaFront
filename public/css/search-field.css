@@ -100,20 +100,20 @@ header a {
   font-size: 1.2rem;
 }
 
-form label {
+.search-form label {
   font-size: 1.6rem;
 }
-form input {
+.search-form input {
   height: 2rem;
   margin: 1rem 0 1rem 0;
   border: none;
 }
-form ::-moz-placeholder {
+.search-form ::-moz-placeholder {
   text-align: center;
 }
-form :-ms-input-placeholder {
+.search-form :-ms-input-placeholder {
   text-align: center;
 }
-form ::placeholder {
+.search-form ::placeholder {
   text-align: center;
 }

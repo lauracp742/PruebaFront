@@ -5,7 +5,7 @@
 
 
 <div class="container">
-    <form action="search" method="GET">
+    <form class="search-form" action="search" method="GET">
         <div class="search-container">
             <div>
                 <label hidden for="search">Search for drinks</label>
@@ -42,6 +42,7 @@
                         @csrf
                         <input type="hidden" name="image" value=" {{ $drink['strDrinkThumb'] }}" />
                         <input type="hidden" name="name" value=" {{ $drink['strDrink'] }}" />
+                        <input type="hidden" name="drink" value=" {{ $drink['idDrink'] }}" />
                         <button type="submit">Like</button>
                     </form>
                 @endif
