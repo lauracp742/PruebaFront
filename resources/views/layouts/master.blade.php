@@ -14,16 +14,15 @@
     <header>
        <nav>
            <ul>
-        </ul>
-        <li><a href="{{route('dashboard')}} "> Home </a></li>
+                <li><a href="{{route('dashboard')}} "> Home </a></li>
 
-        @if (Auth::check())
-        <li><a href={{route("favorites")}}>Favorites</a></li>
+                @if (Auth::check())
+                <li><a href={{route("favorites")}}>Favorites</a></li>
 
-        <li><a href={{route("logout")}}> Logout </a></li>
+                <li><a href={{route("logout")}}> Logout </a></li>
 
-        @endif
-
+                @endif
+            </ul>
        </nav>
 
 

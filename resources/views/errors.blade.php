@@ -1,6 +1,6 @@
 
 @if ($errors->any())
-<p>
+<p class="error">
     <u>{{ $errors->first() }}</u>
 </p>
 @endif

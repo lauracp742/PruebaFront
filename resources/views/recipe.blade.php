@@ -4,9 +4,9 @@
 
 
 
-<div class="drink">
-    <h2> {{ $drink['strDrink'] }}  </h2>
-    <img src=" {{ $drink['strDrinkThumb'] }}" alt="Photo of the drink" />
+<div class="recipe-img-container">
+    <h1 class="title"> {{ $drink['strDrink'] }}  </h1>
+    <img class="recipe-img" src=" {{ $drink['strDrinkThumb'] }}" alt="Photo of the drink" />
 
 </div>
 <div class="recipe-container">

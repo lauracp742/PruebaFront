@@ -18,6 +18,7 @@ $mobile: "(max-width: 375px)";
     margin: 0;
     padding: 0;
     size: 10px;
+    box-sizing: border-box;
 }
 html {
     box-sizing: border-box;
@@ -26,7 +27,9 @@ main {
     @extend %flex-box-settings;
     width: 100%;
 }
-
+section {
+    padding: 20px;
+}
 body {
     font: 100% $font-stack;
     color: $primary-color;
@@ -49,6 +52,10 @@ header {
         width: 100%;
     }
 
+    ul {
+        display: flex;
+    }
+
     li {
         list-style: none;
         margin: 2rem;
@@ -56,6 +63,11 @@ header {
     a {
         text-decoration: none;
         font-size: 1.6rem;
+        color: black;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 @media screen and #{$mobile} {
@@ -69,16 +81,34 @@ header {
     }
 }
 
+.container {
+    padding: 30px;
+}
+
 .drink {
-    width: calc(100%-2rem);
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 1px 14px 0px #b56489;
+    margin-bottom: 30px;
 
+    &:hover {
+        box-shadow: 0px 1px 3px 0px #674253;
+    }
+
+    a {
+        @extend %flex-box-settings;
+        align-items: center;
+        width: 100%;
+        // border-radius: ;
+    }
     img {
-        width: 50%;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
     }
 
     h2,
@@ -87,9 +117,49 @@ header {
     }
 
     button {
-        border: none;
-        cursor: pointer;
         padding: 10px 20px;
+        border: 0;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 1px;
+        transition: 0.2s ease;
+        margin: 20px 0;
+        cursor: pointer;
         background-color: pink;
+        box-shadow: 1px 1px 5px 0px #736060;
+
+        &:hover {
+            box-shadow: 0px 1px 3px 0px #292323;
+        }
+    }
+
+    .unlike-btn {
+        background-color: #ffd9e2;
+        box-shadow: 0px 1px 3px 0px #292323;
+    }
+}
+
+.title {
+    text-align: center;
+    margin: 30px;
+}
+
+.favorite-error {
+    text-align: center;
+    font-size: 2rem;
+}
+.error {
+    text-align: center;
+}
+@media screen and (min-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 0.3fr));
+        grid-gap: 60px;
+    }
+
+    .drink {
+        margin-bottom: 0;
     }
 }

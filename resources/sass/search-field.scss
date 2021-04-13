@@ -10,9 +10,21 @@
     button {
         @extend %button-settings;
         border-radius: 0%;
-        width: 5rem;
-        height: 2rem;
-        font-size: 1.2rem;
+        // width: 5rem;
+        // height: 2rem;
+        padding: 13px 20px;
+        border: 0;
+        border-radius: 0%;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 1px;
+        transition: 0.2s ease;
+        margin: 20px 0;
+        cursor: pointer;
+
+        &:focus {
+            outline: #b56489 solid 1px;
+        }
     }
 }
 
@@ -22,10 +34,12 @@
     }
     input {
         height: 2rem;
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 5px 1rem 0;
         border: none;
-    }
-    ::placeholder {
-        text-align: center;
+        padding: 20px;
+
+        &:focus {
+            outline: #b56489 solid 1px;
+        }
     }
 }

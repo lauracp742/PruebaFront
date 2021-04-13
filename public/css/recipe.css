@@ -1,4 +1,4 @@
-.ingredients, .recipe-container, main {
+.ingredients, .recipe-container, .drink a, main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   size: 10px;
+  box-sizing: border-box;
 }
 
 html {
@@ -16,6 +17,10 @@ html {
 
 main {
   width: 100%;
+}
+
+section {
+  padding: 20px;
 }
 
 body {
@@ -40,6 +45,9 @@ header nav {
   justify-content: center;
   width: 100%;
 }
+header ul {
+  display: flex;
+}
 header li {
   list-style: none;
   margin: 2rem;
@@ -47,6 +55,10 @@ header li {
 header a {
   text-decoration: none;
   font-size: 1.6rem;
+  color: black;
+}
+header a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 375px) {
@@ -57,32 +69,96 @@ header a {
     font-size: 1.4rem;
   }
 }
+.container {
+  padding: 30px;
+}
+
 .drink {
-  width: calc(100%-2rem);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 1px 14px 0px #b56489;
+  margin-bottom: 30px;
+}
+.drink:hover {
+  box-shadow: 0px 1px 3px 0px #674253;
+}
+.drink a {
+  align-items: center;
+  width: 100%;
 }
 .drink img {
-  width: 50%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
 }
 .drink h2,
 .drink button {
   margin: 20px;
 }
 .drink button {
-  border: none;
-  cursor: pointer;
   padding: 10px 20px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: 0.2s ease;
+  margin: 20px 0;
+  cursor: pointer;
   background-color: pink;
+  box-shadow: 1px 1px 5px 0px #736060;
+}
+.drink button:hover {
+  box-shadow: 0px 1px 3px 0px #292323;
+}
+.drink .unlike-btn {
+  background-color: #ffd9e2;
+  box-shadow: 0px 1px 3px 0px #292323;
 }
 
+.title {
+  text-align: center;
+  margin: 30px;
+}
+
+.favorite-error {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.error {
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 0.3fr));
+    grid-gap: 60px;
+  }
+
+  .drink {
+    margin-bottom: 0;
+  }
+}
 .recipe-container {
   width: 100%;
   align-items: center;
   margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.recipe-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recipe-img-container .recipe-img {
+  width: 50%;
 }
 
 .ingredients {
@@ -93,6 +169,7 @@ header a {
 .ingredients p {
   font-size: 1.4rem;
   margin-top: 0.2rem;
+  text-align: center;
 }
 .ingredients h2,
 .ingredients h3 {
