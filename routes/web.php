@@ -11,7 +11,6 @@ use App\Http\Controllers\DeleteFavoritesController;
 use App\Http\Controllers\GetRecipeController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::view('/', 'auth/login')->name('login')->middleware('guest'); // Directs site to login page
 Route::post('login', LoginController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth')->name('dashboard');

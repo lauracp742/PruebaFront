@@ -8,7 +8,6 @@ use App\Models\User;
 
 class GetRecipeTest extends TestCase
 {
-
     use RefreshDatabase;
     public function test_get_recipe()
     {

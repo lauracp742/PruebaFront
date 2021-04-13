@@ -16,7 +16,6 @@ class GetRecipeController extends Controller
      */
     public function index($idDrink)
     {
-
         $user = Auth::user();
 
         $response = Http::get("https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=$idDrink");
@@ -29,7 +28,6 @@ class GetRecipeController extends Controller
         $ingredients = [];
 
         if ($response !== null) {
-
             for ($i = 1; $i <= 15; $i++) {
                 $ingredient = $drinks['strIngredient' . $i];
                 $measurements = $drinks['strMeasure' . $i];
