@@ -3,6 +3,7 @@
 
 ## About
 We built a cocktail app in Laravel which lets you search for and save your favorite drink recipes.
+We have used the API from [TheCocktailDB](https://www.thecocktaildb.com/).
 
 
 ## Instructions
