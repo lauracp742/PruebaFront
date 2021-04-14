@@ -16,13 +16,9 @@ class DeleteFavoritesController extends Controller
     public function __invoke(Request $request)
     {
         $id = $request->input('id');
-        // dd($id);
-        //Favorite::destroy($id);
 
         Favorite::where('id', $id)->delete();
-        // $favorite = Favorite::find($id);
 
-        // $favorite->delete();
         return back();
     }
 }

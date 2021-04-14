@@ -14,8 +14,8 @@
                 <input name="name" id="name" type="name" placeholder="First name"/>
             <div>
                     <label for="email">Email</label>
-             </div>
-             <div>
+            </div>
+            <div>
                 <input name="email" id="email" type="email" placeholder="example@example.com"/>
             </div>
             <div>

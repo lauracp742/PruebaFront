@@ -23,20 +23,4 @@ class DashboardController extends Controller
             'user' => $user
         ]);
     }
-
-    /*
-    function getSearch(Request $request)
-    {
-        $search = $request->input('search');
-
-
-        $response = Http::get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=$search");
-
-        $response = json_decode($response->body(), true);
-
-        return view(
-            'dashboard',
-            $response->drinks
-        );
-    }*/
 }

@@ -14,12 +14,18 @@
     <header>
        <nav>
            <ul>
-                <li><a href="{{route('dashboard')}} "> Home </a></li>
+                <li>
+                    <a href="{{route('dashboard')}} "> Home </a>
+                </li>
 
                 @if (Auth::check())
-                <li><a href={{route("favorites")}}>Favorites</a></li>
+                <li>
+                    <a href={{route("favorites")}}>Favorites</a>
+                </li>
 
-                <li><a href={{route("logout")}}> Logout </a></li>
+                <li>
+                    <a href={{route("logout")}}> Logout </a>
+                </li>
 
                 @endif
             </ul>
@@ -33,7 +39,7 @@
         <!-- This is a container for content
         Yield is used to display the contents of a given section-->
 
-        </section>
+    </section>
 
 
 </body>

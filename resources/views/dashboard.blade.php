@@ -14,9 +14,6 @@
 
 @include('errors')
 <div class="container">
-
-
-
     @if($response ?? '')
         @if($response['drinks'] === null )
             @error('search')
@@ -53,9 +50,5 @@
         @endforeach
     @endif
 @endif
-
-
-
-
 
 @endsection
