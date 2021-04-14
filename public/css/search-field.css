@@ -145,6 +145,7 @@ header a:hover {
 @media screen and (min-width: 800px) {
   .container {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(400px, 0.3fr));
     grid-gap: 60px;
   }
