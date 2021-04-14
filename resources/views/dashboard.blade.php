@@ -45,7 +45,7 @@
                         @csrf
                         <input type="hidden" name="image" value=" {{ $drink['strDrinkThumb'] }}" />
                         <input type="hidden" name="name" value=" {{ $drink['strDrink'] }}" />
-                        <input type="hidden" name="drink" value=" {{ $drink['idDrink'] }}" />
+                        <input type="hidden" name="drink_id" value=" {{ $drink['idDrink'] }}" />
                         <button type="submit">Add to favorites</button>
                     </form>
                 @endif

@@ -26,7 +26,7 @@ class AddFavoriteController extends Controller
         $favorite->user_id = Auth::id();
         $favorite->name = $request->input('name');
         $favorite->image = $request->input('image');
-        $favorite->drink_id = $request->input('drink');
+        $favorite->drink_id = $request->input('drink_id');
         $favorite->save();
 
         return back();

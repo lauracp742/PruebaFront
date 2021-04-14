@@ -19,12 +19,14 @@ class FavoritesTest extends TestCase
             ->followingRedirects()
             ->post('favorites', [
                 "name" => "Example name",
-                "image" => "Example image"
+                "image" => "Example image",
+                'drink_id' => '44322'
             ]);
 
         $this->assertDatabaseHas('favorites', [
             "name" => "Example name",
-            "image" => "Example image"
+            "image" => "Example image",
+            'drink_id' => '44322'
         ]);
     }
     public function test_remove_favorite()
@@ -52,7 +54,8 @@ class FavoritesTest extends TestCase
             ->followingRedirects()
             ->post('favorites', [
                 "name" => "Example name",
-                "image" => "Example image"
+                "image" => "Example image",
+                'drink_id' => '44322',
             ]);
 
         $response = $this
