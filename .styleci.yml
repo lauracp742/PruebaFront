@@ -1,5 +1,0 @@
-preset: psr-12
-
-finder:
-  name:
-    - "*.php"
