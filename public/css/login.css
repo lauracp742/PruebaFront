@@ -74,6 +74,9 @@ header a:hover {
   header li {
     margin: 1rem;
   }
+  header li {
+    margin: 1rem;
+  }
   header a {
     font-size: 1.4rem;
   }
@@ -204,7 +207,6 @@ header a:hover {
 }
 .form-container form input:focus {
   border-color: #dd8ea3;
-  outline: 1px solid #000;
 }
 .form-container form button {
   width: 15rem;

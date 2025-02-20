@@ -10,5 +10,5 @@
         <label for="password">Password</label>
         <input name="password" id="password" type="password" />
     </div>
-    <button type="submit">Login</button>
+    <button type="submit">The Cocktail</button>
 </form>

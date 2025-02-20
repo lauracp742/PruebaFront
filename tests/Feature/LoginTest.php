@@ -45,6 +45,6 @@ class LoginTest extends TestCase
                 'email' => 'example@yrgo.se',
             ]);
 
-        $response->assertSeeText('Whoops! Please try to login again.');
+        $response->assertSeeText('Whoops! Please try to login againnnn.');
     }
 }

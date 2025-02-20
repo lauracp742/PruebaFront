@@ -4,19 +4,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Language Lines
+    | mensajes de acyualizacion de contraseña
     |--------------------------------------------------------------------------
-    |
-    | The following language lines are the default lines which match reasons
-    | that are given by the password broker for a password update attempt
-    | has failed, such as for an invalid token or invalid new password.
-    |
     */
 
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have emailed your password reset link!',
-    'throttled' => 'Please wait before retrying.',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that email address.",
+    'reset' => 'Tu contraseña ha sido actualizada!',
+    'sent' => 'Hemos enviado un codigo email a tu correo',
+    'throttled' => 'Espera antes de volver a intentarlo',
+    'token' => 'El codigo es incorrecto',
+    'user' => "No encontramos un usuario con este correo.",
 
 ];

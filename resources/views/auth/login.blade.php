@@ -9,35 +9,45 @@
             <h1>Login</h1>
 
             <form action="login" method="post">
-            @csrf
+                @csrf
 
                 <div>
-                    <label for="email">Email</label>
+                    <label for="email">Correo</label>
                 </div>
                 <div>
-                    <input name="email" id="email" type="email" placeholder="example@example.com" />
+                    <input name="email" id="email" type="email" placeholder="correo@correo.com" />
                 </div>
                 <div>
-                    <label for="password">Password</label>
+                    <label for="password">Contraseña</label>
                 </div>
                 <div>
-                    <input name="password" id="password" type="password" placeholder="Please enter your password"/>
+                    <input name="password" id="password" type="password" placeholder="Por favor ingresa tu contraseña"/>
                 </div>
 
                 <button type="submit">Login</button>
-
             </form>
 
-        <a href="/register"> Not a user? Register here </a>
+            <a href="/register">No tines una cuenta, registrate aqui.</a>
+
         </div>
     </section>
-@error('email')
-<div class="">
-    {{ $message }}
-</div>
-@enderror
 
+    @error('email')
+        <div class="">
+            {{ $message }}
+        </div>
+    @enderror
 
-
- @endsection
- {{-- This ends the body --}}
+    {{-- Si hay un mensaje de error 'error' en la sesión, muestra la alerta de SweetAlert --}}
+    @if (session('error'))
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.1/dist/sweetalert2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.1/dist/sweetalert2.min.css" rel="stylesheet">
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Contraseña incorrecta',
+                text: '{{ session('error') }}',
+            });
+        </script>
+    @endif
+@endsection

@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/search-field.css">
     <link rel="stylesheet" href="/css/recipe.css">
-    <title>Your best drink app</title>
+    <title>Tu Bebida Favorita</title>
 </head>
 <body>
     <header>
        <nav>
            <ul>
                 <li>
-                    <a href="{{route('dashboard')}} "> Home </a>
+                    <a href="{{route('dashboard')}} "> Inicio </a>
                 </li>
 
                 @if (Auth::check())
                 <li>
-                    <a href={{route("favorites")}}>Favorites</a>
+                    <a href={{route("favorites")}}>Favoritos</a>
                 </li>
 
                 <li>

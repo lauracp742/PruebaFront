@@ -10,6 +10,7 @@ use App\Http\Controllers\SearchDrinkController;
 use App\Http\Controllers\DeleteFavoritesController;
 use App\Http\Controllers\GetRecipeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CocktailController;
 
 Route::view('/', 'auth/login')->name('login')->middleware('guest'); // Directs site to login page
 Route::post('login', LoginController::class);
@@ -22,3 +23,5 @@ Route::get('search', SearchDrinkController::class)->middleware('auth');
 Route::post('delete', DeleteFavoritesController::class);
 Route::get('/recipe/{drinkId}', [GetRecipeController::class, 'index'])->name('recipe');
 Route::post('favorites', AddFavoriteController::class)->middleware('auth');
+Route::get('/home', CocktailController::class);
+Route::get('/login', [LoginController::class, 'showLoginForm']);

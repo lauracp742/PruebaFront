@@ -73,6 +73,9 @@ header a:hover {
   header li {
     margin: 1rem;
   }
+  header li {
+    margin: 1rem;
+  }
   header a {
     font-size: 1.4rem;
   }
@@ -157,20 +160,21 @@ header a:hover {
 .search-container {
   flex-direction: row;
   align-items: center;
-  width: calc(100%-2rem);
-  margin: 1rem;
+  width: 100%;
 }
 .search-container button {
   border-radius: 0%;
+  height: 3rem;
   padding: 13px 20px;
   border: 0;
   border-radius: 0%;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 100%;
   letter-spacing: 1px;
   transition: 0.2s ease;
-  margin: 20px 0;
+  margin: 3rem 0;
   cursor: pointer;
+  border-radius: 30em;
 }
 .search-container button:focus {
   outline: #b56489 solid 1px;
@@ -180,11 +184,21 @@ header a:hover {
   font-size: 1.6rem;
 }
 .search-form input {
-  height: 2rem;
+  height: 3rem;
   margin: 1rem 5px 1rem 0;
   border: none;
   padding: 20px;
+  border-radius: 30em;
+  width: 50%;
+  font-size: 100%;
 }
 .search-form input:focus {
   outline: #b56489 solid 1px;
+}
+
+.search-form-font {
+background-image: url(https://lostragos.com/wp-content/themes/lostragos/inc/images/video-cover.jpg.webp);
+width: 100%;
+height: 10em;
+
 }

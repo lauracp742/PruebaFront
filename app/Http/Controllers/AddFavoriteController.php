@@ -16,19 +16,27 @@ class AddFavoriteController extends Controller
      */
     public function __invoke(Request $request)
     {
+        // Validar los datos del request
         $this->validate($request, [
             'name' => 'required|string',
             'image' => 'required|string',
             'drink_id' => 'string',
         ]);
 
-        $favorite = new Favorite();
-        $favorite->user_id = Auth::id();
-        $favorite->name = $request->input('name');
-        $favorite->image = $request->input('image');
-        $favorite->drink_id = $request->input('drink_id');
-        $favorite->save();
+        try {
+            // Crear un nuevo favorito
+            $favorite = new Favorite();
+            $favorite->user_id = Auth::id();
+            $favorite->name = $request->input('name');
+            $favorite->image = $request->input('image');
+            $favorite->drink_id = $request->input('drink_id');
+            $favorite->save();
 
-        return back();
+            // Si el cóctel se guardó correctamente, pasamos el mensaje de éxito
+            return back()->with('success', 'El cóctel ha sido guardado en favoritos.');
+        } catch (\Exception $e) {
+            // Si hay un error, pasamos un mensaje de error
+            return back()->with('error', 'Hubo un problema al guardar el cóctel. Por favor, comuníquese con el proveedor.');
+        }
     }
 }
